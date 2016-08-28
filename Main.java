@@ -12,11 +12,11 @@ public class Main {
         while (true) {
             String cmd = scanner.next();
             System.out.println(cmd);
-            if (cmd == "r") {
+             if (cmd.equals("rr")) {
                 robot.rotateLeft();
-            } else if (cmd == "l") {
+            } else if (cmd.equals("rl")) {
                 robot.rotateLeft();
-            } else if (cmd == "m") {
+            } else if (cmd.equals("move")) {
                 robot.move();
             }
         }
