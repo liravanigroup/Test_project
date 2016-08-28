@@ -15,18 +15,23 @@ public class MarsRobot implements Robot {
     @Override
     public void move() {
         direction.move(position);
-        System.out.println(position);
     }
 
     @Override
     public void rotateRight() {
-        direction.setNextRight();
-        System.out.println(position.toString());
+       direction = direction.setNextRight();
     }
 
     @Override
     public void rotateLeft() {
-        direction.setNextLeft();
-        System.out.println(position.toString());
+        direction = direction.setNextLeft();
+    }
+
+    @Override
+    public String toString() {
+        return "MarsRobot{" +
+                "position=" + position +
+                ", direction=" + direction +
+                '}';
     }
 }
